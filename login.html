@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atlas | Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #350004;
+        }
+        .login-card {
+            background: #F1ECE3;
+            padding: 40px 50px;
+            border: 1px solid #E2D9C9;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .login-header img {
+            height: 24px;
+            margin: 0 auto 16px;
+        }
+        .login-header h1 {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            color: #2A0E10;
+            letter-spacing: -0.02em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #C49A57;
+            margin-bottom: 8px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 14.5px;
+            border: 1px solid #D4C8B3;
+            background: #FBF8F2;
+            color: #2A0E10;
+            font-family: 'Hanken Grotesk', sans-serif;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus {
+            border-color: #C49A57;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: #350004;
+            color: #F4ECE0;
+            border: none;
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: 'Hanken Grotesk', sans-serif;
+            transition: background 0.2s;
+        }
+        .login-btn:hover {
+            background: #2A0E10;
+        }
+        .error-message {
+            color: #c0392b;
+            font-size: 12.5px;
+            margin-top: 15px;
+            text-align: center;
+            display: none;
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-header">
+            <!-- Using the existing logo -->
+            <img src="assets/images/asset_44d9ac9a.png" alt="Xtopia Logo">
+            <h1>Atlas Login<span style="color:#C49A57">.</span></h1>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Sign In</button>
+            <div id="errorMessage" class="error-message"></div>
+        </form>
+    </div>
+
+    <!-- Firebase Logic -->
+    <script type="module" src="js/login.js"></script>
+</body>
+</html>
