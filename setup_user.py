@@ -4,7 +4,7 @@ API_KEY = "AIzaSyB9p2VlbL35Q0TjjKvLc6qHt8IFqO7rfVU"
 url = f"https://identitytoolkit.googleapis.com/v1/accounts:signUp?key={API_KEY}"
 
 data = {
-    "email": "AtalsJeddah@atlas.com",
+    "email": "Atlas@atlas.com",
     "password": "Welcome",
     "returnSecureToken": True
 }
